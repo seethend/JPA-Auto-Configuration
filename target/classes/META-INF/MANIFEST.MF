@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Implementation-Title: SpringAutoConfiguration
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: ds00543754
+Built-By: Seethend
 Implementation-Vendor-Id: com.seeth
 Build-Jdk: 1.8.0_161
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo

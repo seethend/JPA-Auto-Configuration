@@ -7,8 +7,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.seeth.models.MyUser;
-import com.seeth.repositories.MyUserRepository;
+import com.seeth.models.User;
+import com.seeth.services.UserService;
+
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes=SpringAutoConfigurationApplication.class)
@@ -16,12 +18,14 @@ import com.seeth.repositories.MyUserRepository;
 public class SpringAutoConfigurationApplicationTests {
 
 	@Autowired
-    private MyUserRepository userRepository;
+    private UserService userService;
 
     @Test
     public void whenSaveUser_thenOk() {
-        MyUser user = new MyUser("user@email.com");
-        userRepository.save(user);
+        User user = new User();
+        user.setName("Seethend");
+        user.setEmail("seeth@gmail.com");
+        userService.saveUser(user);
     }
 
 }

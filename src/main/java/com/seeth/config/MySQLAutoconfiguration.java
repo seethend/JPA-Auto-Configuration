@@ -58,11 +58,11 @@ public class MySQLAutoconfiguration {
 	@ConditionalOnMissingBean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		System.out.println("\nInside datasource \n ");
+		System.out.println("\nInside datasource " + env.getProperty("usemysql"));
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://db4free.net:3306/seethend");
-		dataSource.setUsername("seethend");
-		dataSource.setPassword("seethend");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/spring_db");
+		dataSource.setUsername("root");
+		dataSource.setPassword("seeth");
 
 		return dataSource;
 	}
